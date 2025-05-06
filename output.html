@@ -1,0 +1,20 @@
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Relationer mellan objekt</title>
+<script>
+function filterGraph() {
+    var val = document.getElementById('objektstyp-filter').value;
+    var iframe = document.getElementById('graph-frame');
+    iframe.src = 'graphs/graph_' + val + '.html';
+}
+</script>
+</head>
+<body>
+<h1>Relationer mellan objekt</h1>
+<select id="objektstyp-filter" onchange="filterGraph()"><option value="all">Alla</option><option value="Verksamhetsomrade">Verksamhetsområde</option><option value="IT-system">IT-system</option><option value="Process">Process</option></select>
+<br><br>
+<iframe id="graph-frame" src="graphs/graph_all.html" width="100%" height="800px" style="border:none;"></iframe>
+</body>
+</html>
